@@ -8,6 +8,7 @@
     <joint name="joint_3"/>
     <joint name="joint_4"/>
     <joint name="joint_5"/>
+    <joint name="gripper_joint"/>
   </group>
 
   <group name="gripper">
@@ -18,11 +19,12 @@
 
 
   <group_state name="home" group="manipulator">
-    <joint name="joint_1" value="-0.1909" />
-    <joint name="joint_2" value="0.6137" />
-    <joint name="joint_3" value="2.1435" />
+    <joint name="joint_1" value="0" />
+    <joint name="joint_2" value="0" />
+    <joint name="joint_3" value="0" />
     <joint name="joint_4" value="0" />
-    <joint name="joint_5" value="-1.1909" />
+    <joint name="joint_5" value="0" />
+    <joint name="gripper_joint" value="0" />
   </group_state>
 
 
