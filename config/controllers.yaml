@@ -41,7 +41,9 @@
         trajectory: 0.2
         goal: 0.1
 
-
+  grip_position:
+    type: "position_controllers/JointPositionController"
+    joint: gripper_actuator
 
   position:
     type: "position_controllers/JointTrajectoryController"
