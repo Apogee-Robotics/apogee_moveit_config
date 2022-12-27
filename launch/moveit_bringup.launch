@@ -1,4 +1,5 @@
 <launch>
+    <arg name="launch_rviz" default="true"/>
     <!-- State and velocity controllers -->
     <rosparam file="$(find apogee_moveit_config)/config/controllers.yaml" command="load"/>
 
@@ -13,7 +14,9 @@
     </group>
 
     <include file="$(find apogee_moveit_config)/launch/move_group.launch"/>
-    <include file="$(find apogee_moveit_config)/launch/moveit_rviz.launch"/>
+
+    
+    <include if="$(eval arg('launch_rviz') == 'true')" file="$(find apogee_moveit_config)/launch/moveit_rviz.launch"/>
 
 
     <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
